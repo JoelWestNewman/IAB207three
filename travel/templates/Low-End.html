@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    
+<html lang="en">
+
+   <!-- Search Bar Categories -->
+   <div class="jumbotron jumbotron-fluid card card-image" style="background-image: url(https://s8096.pcdn.co/wp-content/uploads/2013/08/car-brands.jpg)">
+    <div class="row justify-content-center mt-5 pb-5">
+        <div class="col-md-6">
+            <div class="jumbotron shadow py-4 mb-4 ">
+                <h1 class="text-center">Search For Cars in Categories</h1>
+                <form class="form-inline d-flex flex-nowrap">
+                    <select class="form-control flex-grow-1 my-1 mr-sm-2" id="inlineFormCustomSelectPref" onchange="location = this.value">
+                        <option selected>Select a Category...</option>
+                        <option value="{{ url_for('main.High')}}">High-End</option>
+                        <option value="{{ url_for('main.Medium')}}">Medium-End</option>
+                        <option value="{{ url_for('main.Low')}}">Low-End</option>
+                    </select>
+                    <button type="Search" class="flex-shrink-1 btn btn-primary my-1">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    footer {
+        background-color: lightslategray;
+        color: black;
+        text-align: center;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Item Detail Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+ {% endblock %}
+
+ {% block content %}
+<Body>
+   <section>
+        <div>
+                <h1> Search Results For Low-End Cars</h1>
+        </div>
+    
+        <div class="card-deck">
+    
+        <article class="card">
+                    <img class="card-img-top" src="static/2016_nissan_pulsar.jpg" alt="Car"
+                        style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                    <div class="card-body">
+                        <h3 class="card-title">2016 Nissan Pulsar ST</h3>
+                        <p class="card-text"></p>
+                        <b> Car Name:</b> 2016 Nissan Pulsar ST <br>
+                        <b> Price:</b>$14,990<br>
+                        <b>Where to Buy:</b> NA<br>
+                        <b> Odometer:</b> 22,539km <br>
+                        <b> Seller:</b> Peter Grant <br>
+                        <b> Description:</b> Nissan Pulsar ST is a 5 door automatic hatchback with bluetooth connectivity,
+                        cruise control, electronic stability control and remote central locking. <br>
+                        </p>
+                        <button type="button">Accessories</button>
+                        <button type="button">Contact Seller</button>
+                        <a href="{{ url_for('main.Nissan')}}"><button>View</button></a>
+                        <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                    </div>
+            </article>
+    
+        <article class="card">
+                    <img class="card-img-top" src="static/2012_honda_civic.jpg" alt="Car"
+                        style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                    <div class="card-body">
+                        <h3 class="card-title">2012 Honda Civic VTI-L</h3>
+                        <p class="card-text"></p>
+                        <b> Car Name:</b> 2012 Honda Civic VTI-L <br>
+                        <b> Price:</b>$15,990<br>
+                        <b>Where to Buy:</b> NA<br>
+                        <b> Odometer:</b> 52,587km <br>
+                        <b> Seller:</b> Peter Grant <br>
+                        <b> Description:</b> The 2012 Honda Civic VTI-L is a 5 door automatic hatchback. <br>
+                        </p>
+                        <button type="button">Accessories</button>
+                        <button type="button">Contact Seller</button>
+                        <a href="{{ url_for('main.Honda')}}"><button>View</button></a>
+                        <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                    </div>
+            </article>
+    
+        <article class="card">
+                    <img class="card-img-top" src="static/2014_suzuki_swift.jpg" alt="Car"
+                        style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                    <div class="card-body">
+                        <h3 class="card-title">2014 Suzuki Swift Sport</h3>
+                        <p class="card-text"></p>
+                        <b> Car Name:</b> 2014 Suzuki Swift Sport <br>
+                        <b> Price:</b>
+                        $13,990<br>
+                        <b>Where to Buy:</b> NA<br>
+                        <b> Odometer:</b> 70,820km <br>
+                        <b> Seller:</b> Peter Grant <br>
+                        <b> Description:</b>The Yellow/Blcak 2014 Suzuki Swift Sport is a 5 door automatic hatchback with
+                        fuel consuption of 6.1L/100h.<br>
+                        </p>
+                        <button type="button">Accessories</button>
+                        <button type="button">Contact Seller</button>
+                        <a href="{{ url_for('main.Suzuki')}}"><button>View</button></a>
+                        <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                    </div>
+            </article>
+   </section>>
+    </Body>
+
+{% endblock %}

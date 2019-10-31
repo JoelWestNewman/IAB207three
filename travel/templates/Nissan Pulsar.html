@@ -1,0 +1,98 @@
+  
+{% extends 'base.html' %}
+
+{% block header %}
+    
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    footer {
+        background-color: lightslategray;
+        color: black;
+        text-align: center;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Item Detail Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    
+ {% endblock %}
+
+ {% block content %}
+
+ <body>
+        <article class="card">
+            <img class="card-img-top" src="../static/2016_nissan_pulsar.jpg"alt="Car" style="width:300px;height:160px;margin-Right:20px;"
+                alt="2016 Nissan Pulsar ST">
+            <div class="card-body">
+                <h3 class="card-title">2016 Nissan Pulsar ST</h3>
+                <p class="card-text"></p>
+                <b> Car Name:</b> 2016 Nissan Pulsar ST <br>
+                <b> Current Bid:  </b> <input type="text" id="myText" value="$14,990" disabled><br>
+                <b> Status:</b> Available<br>
+                <b>Where to Buy:</b> NA <br>
+                <b> Odometer:</b>  22,539km <br>
+                <b> Seller:</b> Peter Grant <br>
+                <b> Description:</b> Nissan Pulsar ST is a 5 door automatic hatchback with bluetooth connectivity,
+                cruise control, electronic stability control and remote central locking. <br>
+                </p>
+                <h5>More Specs:</h5>
+                <table style="width:40%">
+    
+                    <tr>
+                        <td>Seating Capacity</td>
+                        <td>5</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Transmission Type</td>
+                        <td>Automatic</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Drive Type</td>
+                        <td>Front</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Fuel Type</td>
+                        <td>Unleaded</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Fuel Tank Capacity</td>
+                        <td>52</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Fuel Consumption</td>
+                        <td>6.7L/100 km</td>
+                       
+                    </tr>
+                    
+                </table><br>
+    
+                <button type="button">Accessories</button>
+                <button type="button">Contact Seller</button><br><br>
+                <a href="{{url_for('main.bidform')}}"><button type="button">Bid Interest</button></a>
+                <br>
+                <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                <p class="card-text"><small class="text-muted">2 weeks left till bid closes</small></p>
+    
+    
+    
+    
+            </div>
+        </article>
+
+{% endblock %}

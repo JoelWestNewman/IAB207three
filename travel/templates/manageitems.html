@@ -1,0 +1,121 @@
+
+
+{% extends 'base.html' %}
+
+{% block header %}
+
+
+<html lang="en">  
+   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+        table {border-collapse: collapse; border-spacing: 0; width: 700px; left: 15px; position: relative; border: 1px solid #ddd; text-align: center; border-width: 0.1cm;}       
+        th, td {text-align: center; padding: 8px;}
+        footer{background-color: lightslategray; color: black; text-align: center; border-color: black; border-style: solid;}
+        form { width: 400px; }
+        label { float: left; width: 150px; }
+        input[type=text] {float: left; size: 45; box-sizing: border-box;}
+        tr:nth-child(even){background-color: #f2f2f2}
+    </style>
+
+<head>
+
+        
+        <meta charset="utf-8">
+        <meta name="description" content="Item Detail Page"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <title>Car App</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+  
+<header>
+             
+    </header>
+
+    {% endblock %}
+
+    {% block content %}
+
+<body>
+    <section>
+    <div class="card-deck" align="center">
+        <article class="card"><br>
+                <img class="card-img-top"
+                    src="../static/2012_honda_civic.jpg" alt="Car" style="width:300px;height:160px;margin-Right:20px;"
+                    alt="Ford MUSTANG">
+                <div class="card-body">
+                    <h3 class="card-title">Honda Civic</h3>
+                    <p class="card-text"></p>
+                    <form>
+                        <label>Car Name:</label> <input type="text" id="myText" value="Honda Civic" disabled><br><br>
+                        <label>Current Bid:</label> <input type="text" id="myText" value="$20,000" disabled><br><br>
+                        <label>Where to Buy:</label> <input type="text" id="myText" value="Home Pickup" disabled><br><br>
+                        <label>New or Used:</label> <input type="text" id="myText" value="Used" disabled><br><br>
+                        <label>Odometer:</label> <input type="text" id="myText" value="30,000km"><br><br>
+                        <label>Seller:</label> <input type="text" id="myText" value="John Smith" disabled><br><br>
+                        <label>Description: </label> <input type="text" id="myText" value="The Honda Civic is an American car manufactured by Ford. It was originally based on the platform of the second generation North American Ford Falcon, a compact car."><br><br>  
+                    </form>
+                    </p>
+                    <button type="button">Done</button><br>                
+                    <p class="card-text"><small class="text-muted">Added 2 Days ago</small></p>
+                    <p class="card-text"><small class="text-muted">1 Week left till Bid Closes</small></p>
+                </div>
+        </article>
+
+        <article class="card">
+                <div align="center">
+                    <br><b><h1>Previous Bids For Car</h1></b>
+                    </div>
+                <div style="overflow-x:auto;">
+                        <br><table align="center" style="overflow-x:auto;">
+                        <tr>
+                          <th>Bid Amount</th>
+                          <th>Name</th>
+                          <th>Email Address</th>
+                          <th>Phone</th>
+                          <th>Date</th>
+                        </tr>
+                        <tr>
+                          <td>$10,000</td>
+                          <td>Jane Smith</td> 
+                          <td>JSmith@gmail.com</td>
+                          <td>0456718945</td>                     
+                          <td>13/02/2019</td>
+                        </tr>
+                        <tr>
+                            <td>$13,560</td>
+                            <td>Max Million</td> 
+                            <td>MMillion@gmail.com</td>
+                            <td>0478154637</td>                           
+                            <td>16/02/2019</td>
+                        </tr>
+                        <tr>
+                            <td>$20,000</td>
+                            <td>Jane Dolson</td>  
+                            <td>JDolsonn@gmail.com</td>
+                            <td>0418395036</td>                          
+                            <td><b>Current Highest<b><br>20/02/2019</td>
+                            </tr>
+                        </table><br><br>
+                    </div>
+            </article>  
+    </div>
+    </section>
+    </body>
+
+<footer style="overflow-x:auto;">
+            <footer>
+                <br><p>Information</p>
+                <p>Contact information: <a href="Buy/Sellcars@gmail.com">
+                    Buy/Sellcars@gmail.com</a><br>
+                    FaceBook: Buy/Sell Cars   :   Instagram: Buy/Sell Cars          
+                    <address>
+                        Home Office: Door 12, Placement, Brisbane, Queensland, Australia.
+                    <p>Copyright © 2019 All rights reserved.</p>
+                    </address>       
+            </footer>
+    </footer>
+
+    {% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+
+{% endblock %}
+
+{% block content %}
+
+<Body>
+  <h1> Our Complete Car List:</h1>
+
+  {% if cars %}
+
+
+  <ul class="list-group">
+
+    {% for car in cars %}
+
+    <li class="list-group-item">
+
+      <div class="container">
+        <div class="row">
+
+
+          <div class="col-md-7">
+
+            <h5> {{car.name}}</h5>
+            <p>{{car.description}}</p>
+
+            <b> Car Name:</b>{{car.name}}<br>
+            <b> Current Bid:</b> <input type="text" id="myText" value="{{car.minprice}}" disabled><br>
+            <b>Where to Buy:</b> NA <br>
+            <b> Odometer:</b> {{car.odometer}} <br>
+            <b> Seller:</b> {{car.user_id}} <br>
+            <b> Description:</b> {{car.description}} <br>
+            <b> Is Sold:</b> {{car.sold}} <br>
+            </p>
+
+
+
+
+            <a href="" class="btn btn-danger">View Details</a>
+          </div>
+        
+        <div class="col-md-5">
+          <img src="{{car.image}}" width="100%" height = "auto" alt="{{car.name}}">
+
+        </div>
+      </div>
+
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+
+
+
+
+</Body>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+  {% if current_user.is_authenticated %} 
+  <div class="container">
+
+    <div class="row mt-5">
+      <div class="col-md-12">
+
+        <h1>Create Car Listing:</h1>
+        <p>Submit details for the car you wish to sell.</p> 
+
+        {{wtf.quick_form(form)}}
+        
+      </div>
+    </div>
+  </div>
+
+  {% else %} 
+
+  <div class="container">
+
+    <div class="row mt-5">
+      <div class="col-md-12">
+
+        <h1>You must be logged in to access this function.</h1>
+        
+      </div>
+    </div>
+  </div>
+
+  {% endif %} 
+
+{% endblock %}

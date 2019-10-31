@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.card-deck{
+    border-style: solid;
+    border-width: 2px;
+   
+}
+</style>
+<head>
+    <title>Car App</title>
+</head>
+<div class="card-deck" align="center">
+    <article class="card">
+        <p class="card-text"><large class="text-muted">Please Fill in the Following Details:</large></p><br>
+        <b></b> <input type="text" placeholder="Your Name:" name="Your Name" style = "width: 500px; left: 30px; position: relative;"><br><br>
+        <b></b> <input type="text" placeholder="Your Email Address:" name="Your Email Address" style = "width: 500px; left: 30px; position: relative;"><br><br>
+        <b></b> <input type="text" placeholder="Your Contact Number:" name="Your Contact Number" style = "width: 500px; left: 30px; position: relative;"><br><br>
+        <b></b> <input type="text" placeholder="Bid Date:" name="Bid Date" style = "width: 500px; left: 30px; position: relative;"><br>             
+        
+       
+        <a href="{{url_for('main.index')}}"><button type="button" style = "width: 500px; left: 30px; position: relative;">Save</button><br></a>
+        <a href="{{url_for('main.index')}}"><button type="button" style = " width: 500px; left: 30px; position: relative;">Cancel</button><br><br></a>                          
+        </article>
+</div>
+</html>

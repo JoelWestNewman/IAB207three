@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<h1>THIS CAR HAS NOT BEEN SOLD</h1>
+  <div class="container">
+
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h1>Viewing sold car:</h1>
+        <h5>Car Name:</h5>
+        <p>{{car.name}}</p>
+        <h5>Car Minimum Price:</h5>
+        <p>{{car.minprice}}</p>
+        <h5>Car Odometer:</h5>
+        <p>{{car.odometer}}</p>
+        <h5>Car Description:</h5>
+        <p>{{car.description}}</p>
+        <h5>Car Image:</h5>
+        <p>{{car.image}}</p>        
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

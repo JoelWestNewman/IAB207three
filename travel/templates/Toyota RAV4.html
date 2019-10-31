@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    footer {
+        background-color: lightslategray;
+        color: black;
+        text-align: center;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Item Detail Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    
+ {% endblock %}
+
+ {% block content %}
+
+<body>
+    <section>
+            <article class="card">
+                    <img class="card-img-top" src="static/2015_toyota_rav4_.jpg" alt="Car"
+                        style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                    <div class="card-body">
+                        <h3 class="card-title">2015 Toyota RAV4 GX (4X4)</h3>
+                        <p class="card-text"></p>
+                        <b> Car Name:</b> 2015 Toyota RAV4 GX (4X4) <br>
+                        <b> Price:</b>$23,990<br>
+                        <b>Where to Buy:</b> NA<br>
+                        <b> Odometer:</b> 10,000km <br>
+                        <b> Seller:</b> Peter Jones <br>
+                        <b> Description: An medium-end car that people will envy to have</b> 
+                        </p>
+                        <h5>More Specs:</h5>
+                        <table style="width:40%">
+            
+                            <tr>
+                                <td>Seating Capacity</td>
+                                <td>5</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>Transmission Type</td>
+                                <td>Automatic</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Drive Type</td>
+                                <td>Front</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>Fuel Type</td>
+                                <td>Unleaded 95</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>Fuel Tank Capacity</td>
+                                <td>40</td>
+                               
+                            </tr>
+                            <tr>
+                                <td>Fuel Consumption</td>
+                                <td>6.0L/100 km</td>
+                               
+                            </tr>
+                            
+                        </table><br>
+                        <button type="button">Accessories</button>
+                        <button type="button">Contact Seller</button>
+                        <a href="{{url_for('main.bidform')}}"><button type="button">Bid Interest</button></a>
+                        <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                    </div>
+            </article>
+        </section>
+    </body>
+
+{% endblock %}

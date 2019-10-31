@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    
+    
+ {% endblock %}
+
+ {% block content %}
+
+
+   <!-- Search Bar Categories -->
+   <div class="jumbotron jumbotron-fluid card card-image" style="background-image: url(https://s8096.pcdn.co/wp-content/uploads/2013/08/car-brands.jpg)">
+    <div class="row justify-content-center mt-5 pb-5">
+        <div class="col-md-6">
+            <div class="jumbotron shadow py-4 mb-4 ">
+                <h1 class="text-center">Search For Cars in Categories</h1>
+                <form class="form-inline d-flex flex-nowrap">
+                    <select class="form-control flex-grow-1 my-1 mr-sm-2" id="inlineFormCustomSelectPref" onchange="location = this.value">
+                        <option selected>Select a Category...</option>
+                        <option value="{{ url_for('main.High')}}">High-End</option>
+                        <option value="{{ url_for('main.Medium')}}">Medium-End</option>
+                        <option value="{{ url_for('main.Low')}}">Low-End</option>
+                    </select>
+                    <button type="Search" class="flex-shrink-1 btn btn-primary my-1">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<body>
+<section>
+    <div>
+        <h1>Top Searched Cars</h1>
+    </div>
+
+<div class="card-deck">
+
+    <!--Low End-->
+<article class="card">
+                <img class="card-img-top" src="static/2016_nissan_pulsar.jpg" alt="Yar"
+                    style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                <div class="card-body">
+                    <h3 class="card-title">2016 Nissan Pulsar ST</h3>
+                    <p class="card-text"></p>
+                    <b> Car Name:</b> 2016 Nissan Pulsar ST <br>
+                    <b> Price:</b>$14,990<br>
+                    <b>Where to Buy:</b> NA<br>
+                    <b> Odometer:</b> 22,539km <br>
+                    <b> Seller:</b> Peter Grant <br>
+                    <b> Description:</b> Nissan Pulsar ST is a 5 door automatic hatchback with bluetooth connectivity,
+                    cruise control, electronic stability control and remote central locking. <br>
+                    </p>
+                    <button type="button">Accessories</button>
+                    <button type="button">Contact Seller</button>
+                    <a href="{{ url_for('main.Nissan')}}"><button>View</button></a>
+                    <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                </div>
+    </article>
+
+     <!--Medium End-->
+<article class="card">
+            <img class="card-img-top" src="static/2016_mercedes_benz.jpg" alt="Car"
+                style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+            <div class="card-body">
+                <h3 class="card-title">2016 Mercedes-Benz C250</h3>
+                <p class="card-text"></p>
+                <b> Car Name:</b> 2016 Mercedes-Benz C250 <br>
+                <b> Price:</b>$48,880<br>
+                <b>Where to Buy:</b> NA<br>
+                <b> Odometer:</b> 10,000km <br>
+                <b> Seller:</b> Joe Grant <br>
+                <b> Description:</b> 
+                </p>
+                <button type="button">Accessories</button>
+                <button type="button">Contact Seller</button>
+                <a href="{{ url_for('main.Mercedes')}}"><button>View</button></a>
+                <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+            </div>
+    </article>
+
+     <!--High End-->
+<article class="card">
+            <img class="card-img-top" src="static/2018_rolls_royce_wraith.jpg" alt="Car"
+                style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+            <div class="card-body">
+                <h3 class="card-title">2018 Rolls-Royce Wraith</h3>
+                <p class="card-text"></p>
+                <b> Car Name:</b> 2018 Rolls-Royce Wraith <br>
+                <b> Price:</b>$670,000<br>
+                <b>Where to Buy:</b> NA<br>
+                <b> Odometer:</b> 10,000km <br>
+                <b> Seller:</b> Peter Grant <br>
+                <b> Description:</b> 
+                </p>
+                <button type="button">Accessories</button>
+                <button type="button">Contact Seller</button>
+                <a href="{{ url_for('main.Rolls')}}"><button>View</button></a>
+                <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+            </div>
+    </article>
+    <br>
+
+
+
+</div> 
+</body><br>
+  
+  {% endblock %}
+  
+ 

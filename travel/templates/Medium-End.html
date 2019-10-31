@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    
+<html lang="en">
+
+   <!-- Search Bar Categories -->
+   <div class="jumbotron jumbotron-fluid card card-image" style="background-image: url(https://s8096.pcdn.co/wp-content/uploads/2013/08/car-brands.jpg)">
+    <div class="row justify-content-center mt-5 pb-5">
+        <div class="col-md-6">
+            <div class="jumbotron shadow py-4 mb-4 ">
+                <h1 class="text-center">Search For Cars in Categories</h1>
+                <form class="form-inline d-flex flex-nowrap">
+                    <select class="form-control flex-grow-1 my-1 mr-sm-2" id="inlineFormCustomSelectPref" onchange="location = this.value">
+                        <option selected>Select a Category...</option>
+                        <option value="{{ url_for('main.High')}}">High-End</option>
+                        <option value="{{ url_for('main.Medium')}}">Medium-End</option>
+                        <option value="{{ url_for('main.Low')}}">Low-End</option>
+                    </select>
+                    <button type="Search" class="flex-shrink-1 btn btn-primary my-1">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    footer {
+        background-color: lightslategray;
+        color: black;
+        text-align: center;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Item Detail Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+ {% endblock %}
+
+ {% block content %}
+ <body>
+    <section>   
+        <div>
+             <h1> Searched Results For Medium-End</h1>
+        </div>
+        
+        <div class="card-deck">
+        
+            <article class="card">
+                        <img class="card-img-top" src="static/2016_mercedes_benz.jpg" alt="Car"
+                            style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                        <div class="card-body">
+                            <h3 class="card-title">2016 Mercedes-Benz C250</h3>
+                            <p class="card-text"></p>
+                            <b> Car Name:</b> 2016 Mercedes-Benz C250 <br>
+                            <b> Price:</b>$48,880<br>
+                            <b>Where to Buy:</b> NA<br>
+                            <b> Odometer:</b> 10,000km <br>
+                            <b> Seller:</b> Joe Grant <br>
+                            <b> Description:</b> 
+                            </p>
+                            <button type="button">Accessories</button>
+                            <button type="button">Contact Seller</button>
+                            <a href="{{ url_for('main.Mercedes')}}"><button>View</button></a>
+                            <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                        </div>
+                </article>
+        
+            <article class="card">
+                        <img class="card-img-top" src="static/2015_audi_a3.jpg" alt="Car"
+                            style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                        <div class="card-body">
+                            <h3 class="card-title">2015 Audi A3 Sportback 1.4 Tfsi Attraction</h3>
+                            <p class="card-text"></p>
+                            <b> Car Name:</b> 2015 Audi A3 Sportback 1.4 Tfsi Attraction  <br>
+                            <b> Price:</b>$24,000<br>
+                            <b>Where to Buy:</b> NA<br>
+                            <b> Odometer:</b> 10,000km <br>
+                            <b> Seller:</b> Ruby Grant <br>
+                            <b> Description:</b> 
+                            </p>
+                            <button type="button">Accessories</button>
+                            <button type="button">Contact Seller</button>
+                            <a href="{{ url_for('main.Audi')}}"><button>View</button></a>
+                            <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                        </div>
+                </article>
+        
+            <article class="card">
+                        <img class="card-img-top" src="static/2015_toyota_rav4_.jpg" alt="Car"
+                            style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                        <div class="card-body">
+                            <h3 class="card-title">2015 Toyota RAV4 GX (4X4)</h3>
+                            <p class="card-text"></p>
+                            <b> Car Name:</b> 2015 Toyota RAV4 GX (4X4) <br>
+                            <b> Price:</b>$23,990<br>
+                            <b>Where to Buy:</b> NA<br>
+                            <b> Odometer:</b> 10,000km <br>
+                            <b> Seller:</b> Peter Jones <br>
+                            <b> Description:</b> 
+                            </p>
+                            <button type="button">Accessories</button>
+                            <button type="button">Contact Seller</button>
+                            <a href="{{ url_for('main.Toyota')}}"><button>View</button></a>
+                            <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                        </div>
+                </article>
+     </section>  
+ </body>
+        
+
+    
+  {% endblock %}
+  
+ 

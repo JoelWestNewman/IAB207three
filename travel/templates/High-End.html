@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    
+<html lang="en">
+
+   <!-- Search Bar Categories -->
+<div class="jumbotron jumbotron-fluid card card-image" style="background-image: url(https://s8096.pcdn.co/wp-content/uploads/2013/08/car-brands.jpg)">
+    <div class="row justify-content-center mt-5 pb-5">
+        <div class="col-md-6">
+            <div class="jumbotron shadow py-4 mb-4 ">
+                <h1 class="text-center">Search For Cars in Categories</h1>
+                <form class="form-inline d-flex flex-nowrap">
+                    <select class="form-control flex-grow-1 my-1 mr-sm-2" id="inlineFormCustomSelectPref" onchange="location = this.value">
+                        <option selected>Select a Category...</option>
+                        <option value="{{ url_for('main.High')}}">High-End</option>
+                        <option value="{{ url_for('main.Medium')}}">Medium-End</option>
+                        <option value="{{ url_for('main.Low')}}">Low-End</option>
+                    </select>
+                    <button type="Search" class="flex-shrink-1 btn btn-primary my-1">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    footer {
+        background-color: lightslategray;
+        color: black;
+        text-align: center;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Item Detail Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Car App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+    
+ {% endblock %}
+
+ {% block content %}
+
+ <body>
+    <section>   
+        <div>
+                 <h1> Searched Results For High-End</h1>
+        </div>
+            
+        <div class="card-deck">
+            
+
+    <article class="card">
+                        <img class="card-img-top" src="static/2018_rolls_royce_wraith.jpg" alt="Car"
+                            style="width:300px;height:160px;margin-Right:20px;" alt="Holden Astra Rs">
+                        <div class="card-body">
+                            <h3 class="card-title">2018 Rolls-Royce Wraith</h3>
+                            <p class="card-text"></p>
+                            <b> Car Name:</b> 2018 Rolls-Royce Wraith <br>
+                            <b> Price:</b>$670,000<br>
+                            <b>Where to Buy:</b> NA<br>
+                            <b> Odometer:</b> 10,000km <br>
+                            <b> Seller:</b> Peter Grant <br>
+                            <b> Description:</b> 
+                            </p>
+                            <button type="button">Accessories</button>
+                            <button type="button">Contact Seller</button>
+                            <a href="{{ url_for('main.Rolls')}}"><button>View</button></a>
+                            <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+                        </div>
+        </article>
+        
+    <article class="card">
+                        <img class="card-img-top" src="static/2015_bentley_continental.jpg" alt="Car"
+                            style="width:300px;height:160px;margin-Right:20px;" alt="BMW Series 3">
+                        <div class="card-body">
+                            <h3 class="card-title">2015 Bentley Continental GT V8 S</h3>
+                            <p class="card-text"></p>
+                            <b> Car Name:</b> 2015 Bentley Continental GT V8 S <br>
+                            <b> Price:</b>$257,900<br>
+                            <b>Where to Buy:</b> NA <br>
+                            <b> Odometer:</b> 15,467km <br>
+                            <b> Seller:</b> Cole Smith <br>
+                            <b> Description:</b> 
+                            </p>
+                            <button type="button">Accessories</button>
+                            <button type="button">Contact Seller</button>
+                            <a href="{{ url_for('main.Bentley')}}"><button>View</button></a>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+        </article>
+        
+    <article class="card">
+                        <img class="card-img-top" src="static/2016_ferrari_488_gtb.jpg" alt="Car"
+                            style="width:300px;height:160px;margin-Right:20px;" alt="BMW Series 3">
+                        <div class="card-body">
+                            <h3 class="card-title">2016 Ferrari 488 GTB</h3>
+                            <p class="card-text"></p>
+                            <b> Car Name:</b> 2016 Ferrari 488 GTB <br>
+                            <b> Price:</b>$389,900<br>
+                            <b>Where to Buy:</b> NA <br>
+                            <b> Odometer:</b> 125km <br>
+                            <b> Seller:</b> John Smith <br>
+                            <b> Description:</b> 
+                            </p>
+                            <button type="button">Accessories</button>
+                            <button type="button">Contact Seller</button>
+                            <a href="{{ url_for('main.Ferrari')}}"><button>View</button></a>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+        </article>
+    </section>  
+    </body>
+
+    
+  {% endblock %}
+  
+ 
